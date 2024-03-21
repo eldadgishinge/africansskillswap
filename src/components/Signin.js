@@ -23,7 +23,7 @@ export default function Signin() {
             className="border border-gray-400 rounded-md p-2"
           />
           <button className="bg-black text-white rounded-md p-2">Sign in</button>
-          <a href="#" className="text-blue-500 text-center">Create an account</a>
+          <a href="/Signup" className="text-blue-500 text-center">Create an account</a>
           <button className="bg-black text-white rounded-md p-2">Sign in with Google</button>
         </form>
       </div>

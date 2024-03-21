@@ -7,6 +7,7 @@ import Share from './components/Share';
 import Learn from './components/Learn';
 import ContactUs from './components/ContactUs';
 import Home from './components/Home';
+import Signup from './components/Signup';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 export default function App() {
@@ -21,6 +22,8 @@ export default function App() {
         <Route path="/share" component={Share}/>
         <Route path="/contactus" component={ContactUs}/>
         <Route path="/signin" component={Signin}/>
+        <Route path="/signup" component={Signup}/>
+        
       </Switch>
     </Router>
       
