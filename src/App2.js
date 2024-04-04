@@ -30,12 +30,12 @@ export default function App2() {
       
       <Navbar/> 
       <Switch>
-        <Route path="/" exact component={Home}/>
+        <Route path="/Home" exact component={Home}/>
         <Route path="/learn" component={Learn}/>
         <Route path="/share" component={Share}/>
         <Route path="/contactus" component={ContactUs}/>
         <Route path="/signup" component={Signup}/>
-        <Route path="/Signin" component={Signin}/>
+        <Route path="/" component={Signin}/>
         
       </Switch>
     </Router>

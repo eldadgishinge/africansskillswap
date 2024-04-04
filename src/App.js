@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './components/login';
 import Logout from './components/logout';
 import { gapi } from 'gapi-script';  
+import { UserProvider } from './context/UserContext';
  const clientId = "307041883946-vsfbo0p3ovu0hf05v0fip465heb9mq8e.apps.googleusercontent.com"
 
 export default function App2() {
@@ -25,7 +26,7 @@ export default function App2() {
     gapi.load('client:auth2', start)
       })
   return (
-    <>
+    <UserProvider>
     <Router>
       
       <Navbar/> 
@@ -39,10 +40,6 @@ export default function App2() {
         
       </Switch>
     </Router>
-    
-
-      
-
-    </>
+    </UserProvider>
   )
 }

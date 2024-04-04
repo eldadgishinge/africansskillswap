@@ -25,7 +25,7 @@ export default function Home() {
                 </motion.div>
             </motion.div>
            
-          
+          <br></br>
            
             <motion.div
                 className="flex flex-col mx-20 space-y-6 space-x-2"

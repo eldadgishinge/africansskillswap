@@ -1,12 +1,17 @@
 import React from "react";
 import supabase from "../config/supabaseClient"
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { UserContext } from "./Signin";
+import { useUserContext } from "../context/UserContext";
+import { UserProvider } from "../context/UserContext";
 
 
 export default function Share() {
     const [fetchError, setFetchError] = useState(null)
     const [categories, setcategories] = useState([])
-
+    const {user, setUser} = useUserContext();
+    console.log("Yess ", user, setUser, useUserContext());
+   
     useEffect(() => {
         const fetchcategories = async () => {
             const { data, error } = await supabase
@@ -84,6 +89,7 @@ export default function Share() {
     console.log(arr_id)
 
     return (
+        <UserProvider>
         <div className="flex items-center justify-center min-h-screen bg-gray-100 py-6">
             <div className="bg-white p-8 rounded-md shadow-md max-w-md w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl">
                 <form onSubmit={handleSubmit} className="flex flex-col space-y-6">
@@ -173,5 +179,6 @@ export default function Share() {
                 </form>
             </div>
         </div>
+        </UserProvider>
     );
 }

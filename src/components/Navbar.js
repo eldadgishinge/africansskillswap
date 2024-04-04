@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-800 flex justify-between items-center h-16 px-4">
-      <div className="text-xl font-bold text-white px-4 md:px-0 rounded"><a href='/Home'>AfricaSkillSwap</a></div>
+      <div className="text-xl font-bold text-white px-4 md:px-0 rounded"><a href='/'>AfricaSkillSwap</a></div>
       <div className="md:hidden">
         <button
           className="text-white bl hover:text-gray-200 px-3 py-2 rounded-md"
@@ -39,7 +39,7 @@ const Navbar = () => {
       </div>
       <ul className={`flex space-x-4 text-white md:flex ${isMenuOpen ? 'block' : 'hidden'}`}>
         <li>
-          <a href="/Home" className="text-white hover:text-gray-200 px-3 py-2 rounded-md">
+          <a href="/" className="text-white hover:text-gray-200 px-3 py-2 rounded-md">
             Home
           </a>
         </li>
