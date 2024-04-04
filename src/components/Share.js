@@ -72,8 +72,16 @@ export default function Share() {
            // window.location.href = '/'
         }
     }
-        
 
+
+    const arr_id = []
+   
+ for (let i = 0; i < categories.length; i++) {
+        //console.log(categories[i].id)
+        arr_id.push(categories[i].id)
+    }
+
+    console.log(arr_id)
 
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-100 py-6">

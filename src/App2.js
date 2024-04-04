@@ -12,10 +12,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './components/login';
 import Logout from './components/logout';
 import { gapi } from 'gapi-script';  
-import App2 from './App2';
  const clientId = "307041883946-vsfbo0p3ovu0hf05v0fip465heb9mq8e.apps.googleusercontent.com"
 
-export default function App() {
+export default function App2() {
   useEffect(() => {
     function start() {
       gapi.client.init({
@@ -29,13 +28,20 @@ export default function App() {
     <>
     <Router>
       
+      <Navbar/> 
       <Switch>
-        {/* <Route path="/" component={Signin}/> */}
+        <Route path="/Home" exact component={Home}/>
+        <Route path="/learn" component={Learn}/>
+        <Route path="/share" component={Share}/>
+        <Route path="/contactus" component={ContactUs}/>
         <Route path="/signup" component={Signup}/>
-        <Route path="/" component={App2}/>
+        <Route path="/" component={Signin}/>
+        
       </Switch>
     </Router>
     
+
+      
 
     </>
   )

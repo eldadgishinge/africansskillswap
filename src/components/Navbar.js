@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { GoogleLogout } from "react-google-login";
+
+const clientId = "307041883946-vsfbo0p3ovu0hf05v0fip465heb9mq8e.apps.googleusercontent.com";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -6,10 +9,13 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const onLogoutSuccess = (response) => {
+    console.log(response);
+};
 
   return (
     <nav className="bg-gray-800 flex justify-between items-center h-16 px-4">
-      <div className="text-xl font-bold text-white px-4 md:px-0 rounded"><a href='/'>AfricaSkillSwap</a></div>
+      <div className="text-xl font-bold text-white px-4 md:px-0 rounded"><a href='/Home'>AfricaSkillSwap</a></div>
       <div className="md:hidden">
         <button
           className="text-white bl hover:text-gray-200 px-3 py-2 rounded-md"
@@ -33,7 +39,7 @@ const Navbar = () => {
       </div>
       <ul className={`flex space-x-4 text-white md:flex ${isMenuOpen ? 'block' : 'hidden'}`}>
         <li>
-          <a href="/" className="text-white hover:text-gray-200 px-3 py-2 rounded-md">
+          <a href="/Home" className="text-white hover:text-gray-200 px-3 py-2 rounded-md">
             Home
           </a>
         </li>
@@ -57,7 +63,11 @@ const Navbar = () => {
             href="/signin"
             className="inline-flex items-center px-4 md:px-6 rounded-md text-white hover:text-gray-200"
           >
-            Sign in
+            <GoogleLogout
+        clientId={clientId}
+        buttonText="Logout"
+        onLogoutSuccess={onLogoutSuccess}
+        />
           </a>
         </li>
       </ul>
