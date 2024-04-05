@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './components/login';
 import Logout from './components/logout';
 import { gapi } from 'gapi-script';  
+
  const clientId = "307041883946-vsfbo0p3ovu0hf05v0fip465heb9mq8e.apps.googleusercontent.com"
 
 export default function App2() {
@@ -30,18 +31,15 @@ export default function App2() {
       
       <Navbar/> 
       <Switch>
-        <Route path="/" exact component={Home}/>
+        <Route path="/Home" exact component={Home}/>
         <Route path="/learn" component={Learn}/>
         <Route path="/share" component={Share}/>
         <Route path="/contactus" component={ContactUs}/>
         <Route path="/signup" component={Signup}/>
-        <Route path="/Signin" component={Signin}/>
+        <Route path="/" component={Signin}/>
         
       </Switch>
     </Router>
-    
-
-      
 
     </>
   )
