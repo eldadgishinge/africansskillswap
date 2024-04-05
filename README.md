@@ -6,6 +6,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm install @craco/craco --save-dev --force`
+
+This will download the node_modules package
+
+### `Create an env file with credentials form superbase`
+
+
 ### `npm start`
 
 Runs the app in the development mode.\

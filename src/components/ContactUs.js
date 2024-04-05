@@ -9,10 +9,10 @@ const ContactUs = () => {
   const [formError, setFormError] = useState(null);
 
   const handleSubmit = async (e) => {
-    //e.preventDefault();
+    e.preventDefault();
     if (!Name || !Email || !Message) {
       setFormError("All fields are required");
-      e.preventDefault();
+      //e.preventDefault();
       return;
     }
     console.log(Name, Email, Message);
